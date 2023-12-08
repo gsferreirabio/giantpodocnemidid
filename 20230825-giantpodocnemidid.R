@@ -15,8 +15,8 @@ morpho.data = read.csv("morphospace-measurements.csv", header = T, row.names = 1
 dev.new(width = 4, height = 6)
 
 pdf("results/variable_plot.pdf", width = 6, height = 6, family = "Times")
-#tiff("results/variable_plot.tif", family = "serif", width = 2000, height = 1800, 
-#      res = 300)
+tiff("results/variable_plot.tif", family = "serif", width = 2000, height = 1800, 
+      res = 300)
 
 plot(x = morpho.data$SH, y = rep(1, length(morpho.data$SH)), ylim = c(0.5, 7.5), 
      xlim = c(0, 1.3), type = "n", xlab = "log-transformed length", ylab = "",
@@ -36,7 +36,7 @@ points(x = morpho.data$MW[which(morpho.data$species == "pd")],
 # Stupendemys
 points(x = morpho.data$MW[which(morpho.data$species == "sg")], 
        y = rep(1, length(morpho.data$species[which(morpho.data$species == "sg")])),
-       pch = 25, col = "#bebebe", bg = "#882255", cex = 2)
+       pch = 25, col = "#bebebe", bg = "#fdae6b", cex = 2)
 # Rondonia
 points(x = morpho.data$MW[which(morpho.data$species == "it")], 
        y = rep(1, length(morpho.data$species[which(morpho.data$species == "it")])),
@@ -51,7 +51,7 @@ points(x = morpho.data$MiL[which(morpho.data$species == "pd")],
 # Stupendemys
 points(x = morpho.data$MiL[which(morpho.data$species == "sg")], 
        y = rep(2, length(morpho.data$species[which(morpho.data$species == "sg")])),
-       pch = 25, col = "#bebebe", bg = "#882255", cex = 2)
+       pch = 25, col = "#bebebe", bg = "#fdae6b", cex = 2)
 # Rondonia
 points(x = morpho.data$MiL[which(morpho.data$species == "it")], 
        y = rep(2, length(morpho.data$species[which(morpho.data$species == "it")])),
@@ -66,7 +66,7 @@ points(x = morpho.data$TSL[which(morpho.data$species == "pd")],
 # Stupendemys
 points(x = morpho.data$TSL[which(morpho.data$species == "sg")], 
        y = rep(3, length(morpho.data$species[which(morpho.data$species == "sg")])),
-       pch = 25, col = "#bebebe", bg = "#882255", cex = 2)
+       pch = 25, col = "#bebebe", bg = "#fdae6b", cex = 2)
 
 # Rondonia
 points(x = morpho.data$TSL[which(morpho.data$species == "it")], 
@@ -82,7 +82,7 @@ points(x = morpho.data$TSW[which(morpho.data$species == "pd")],
 # Stupendemys
 points(x = morpho.data$TSW[which(morpho.data$species == "sg")], 
        y = rep(4, length(morpho.data$species[which(morpho.data$species == "sg")])),
-       pch = 25, col = "#bebebe", bg = "#882255", cex = 2)
+       pch = 25, col = "#bebebe", bg = "#fdae6b", cex = 2)
 # Rondonia
 points(x = morpho.data$TSW[which(morpho.data$species == "it")], 
        y = rep(4, length(morpho.data$species[which(morpho.data$species == "it")])),
@@ -97,7 +97,7 @@ points(x = morpho.data$TSML[which(morpho.data$species == "pd")],
 # Stupendemys
 points(x = morpho.data$TSML[which(morpho.data$species == "sg")], 
        y = rep(5, length(morpho.data$species[which(morpho.data$species == "sg")])),
-       pch = 25, col = "#bebebe", bg = "#882255", cex = 2)
+       pch = 25, col = "#bebebe", bg = "#fdae6b", cex = 2)
 # Rondonia
 points(x = morpho.data$TSML[which(morpho.data$species == "it")], 
        y = rep(5, length(morpho.data$species[which(morpho.data$species == "it")])),
@@ -112,7 +112,7 @@ points(x = morpho.data$SH[which(morpho.data$species == "pd")],
 # Stupendemys
 points(x = morpho.data$SH[which(morpho.data$species == "sg")], 
        y = rep(6, length(morpho.data$species[which(morpho.data$species == "sg")])),
-       pch = 25, col = "#bebebe", bg = "#882255", cex = 2)
+       pch = 25, col = "#bebebe", bg = "#fdae6b", cex = 2)
 # Rondonia
 points(x = morpho.data$SH[which(morpho.data$species == "it")], 
        y = rep(6, length(morpho.data$species[which(morpho.data$species == "it")])),
@@ -127,7 +127,7 @@ points(x = morpho.data$HC[which(morpho.data$species == "pd")],
 # Stupendemys
 points(x = morpho.data$HC[which(morpho.data$species == "sg")], 
        y = rep(7, length(morpho.data$species[which(morpho.data$species == "sg")])),
-       pch = 25, col = "#bebebe", bg = "#882255", cex = 2)
+       pch = 25, col = "#bebebe", bg = "#fdae6b", cex = 2)
 # Rondonia
 points(x = morpho.data$HC[which(morpho.data$species == "it")], 
        y = rep(7, length(morpho.data$species[which(morpho.data$species == "it")])),
@@ -136,7 +136,7 @@ points(x = morpho.data$HC[which(morpho.data$species == "it")],
 legend(x = "topright", legend = c("Peltocephalus maturin", "Peltocephalus dumerilianus", 
                                   "Stupendemys geographica"), 
        cex = 0.7, bty = "n", pch = c(25, 21, 25), pt.cex = 1, col = "#bebebe", 
-       pt.bg = c("#AA4499","#CC6677", "#882255"), text.font = 3)
+       pt.bg = c("#AA4499","#CC6677", "#fdae6b"), text.font = 3)
 
 
 
@@ -242,7 +242,7 @@ points(pca.res$x[, 2][which(morpho.data$species == "it")] ~ pca.res$x[, 1]
        bg = "#AA4499", cex = 2.5)
 points(pca.res$x[, 2][which(morpho.data$species == "sg")] ~ pca.res$x[, 1]
        [which(morpho.data$species == "sg")], pch = 25, col = "#bebebe", 
-       bg = "#882255", cex = 2)
+       bg = "#fdae6b", cex = 2)
 
 points(pca.res$x[, 2][which(morpho.data$species == "ca")] ~ pca.res$x[, 1]
        [which(morpho.data$species == "ca")], pch = 22, col = "#bebebe", 
@@ -258,7 +258,7 @@ legend(x = "topright", legend = c("Peltocephalus maturin", "Stupendemys geograph
         "Podocnemis erythrocephala", "Podocnemis expansa", "Podocnemis lewiana"), 
        cex = 0.7, bty = "n", pch = c(25, 25, 21, 21, 22, 22, 21, 23, 21, 22, 23), 
        pt.cex = 1, col = "#bebebe", pt.bg = c("#AA4499",
-        "#882255", "#CC6677", "#88CCEE", "#DDCC77", "#44AA99", "#44AA99", 
+        "#fdae6b", "#CC6677", "#88CCEE", "#DDCC77", "#44AA99", "#44AA99", 
         "#44AA99", "#332288", "#332288", "#332288"), ncol = 2, text.font = 3)
 
 
@@ -535,7 +535,7 @@ points(y = size.raw$SCL[which(size.raw$Species == "Stupendemys_geographicus")],
        col = "#bebebe", bg = "#AA4499", cex = 2.5)
 
 points(y = fit.SCL2, x = fit.SCm, pch = 25,
-       col = "#bebebe", bg = "#882255", cex = 2.5)
+       col = "#bebebe", bg = "#fdae6b", cex = 2.5)
 
 
 dev.off()
@@ -544,8 +544,8 @@ dev.off()
 # Building Figure 2
 
 pdf("results/figure2.pdf", height = 4.5, width = 8, family = "Times")
-#tiff("results/figure2.tif", family = "serif", width = 3000, height = 1687, 
-#     res = 300)
+tiff("results/figure2.tif", family = "serif", width = 3000, height = 1687, 
+     res = 300)
 
 layout(matrix(c(1,2), ncol = 2, byrow = TRUE), widths = c(7,5), heights = c(2,2))
 par(mai = c(0.5, 0.5, 0.2, 0.2), mgp = c(1.5,0.4,0))
@@ -599,7 +599,7 @@ points(pca.res$x[, 2][which(morpho.data$species == "it")] ~ pca.res$x[, 1]
        bg = "#AA4499", cex = 2)
 points(pca.res$x[, 2][which(morpho.data$species == "sg")] ~ pca.res$x[, 1]
        [which(morpho.data$species == "sg")], pch = 25, col = "#bebebe", 
-       bg = "#882255", cex = 1.5)
+       bg = "#fdae6b", cex = 1.5)
 
 points(pca.res$x[, 2][which(morpho.data$species == "ca")] ~ pca.res$x[, 1]
        [which(morpho.data$species == "ca")], pch = 22, col = "#bebebe", 
@@ -615,7 +615,7 @@ legend(x = "topright", legend = c("Peltocephalus maturin", "Stupendemys geograph
                                   "Podocnemis erythrocephala", "Podocnemis expansa", "Podocnemis lewiana"), 
        cex = 0.6, bty = "n", pch = c(25, 25, 21, 21, 22, 22, 21, 23, 21, 22, 23), 
        pt.cex = 0.8, col = "#bebebe", pt.bg = c("#AA4499",
-                                              "#882255", "#CC6677", "#88CCEE", "#DDCC77", "#44AA99", "#44AA99", 
+                                              "#fdae6b", "#CC6677", "#88CCEE", "#DDCC77", "#44AA99", "#44AA99", 
                                               "#44AA99", "#332288", "#332288", "#332288"), ncol = 2, text.font = 3)
 
 #screen(2)
@@ -657,7 +657,7 @@ points(y = size.raw$SCL[which(size.raw$Species == "Stupendemys_geographicus")],
        col = "#bebebe", bg = "#AA4499", cex = 1.5)
 
 points(y = fit.SCL2, x = fit.SCm, pch = 25,
-       col = "#bebebe", bg = "#882255", cex = 2)
+       col = "#bebebe", bg = "#fdae6b", cex = 2)
 
 
 
